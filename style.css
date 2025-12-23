@@ -1,0 +1,192 @@
+/* style.css - Modern UI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.app-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.brand span {
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.developer-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.github-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #24292f;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.github-btn:hover {
+    background-color: #000;
+}
+
+/* --- MAIN LAYOUT --- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* LEFT PANEL */
+.panel-controls {
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* RIGHT PANEL */
+.panel-canvas {
+    flex: 2;
+    min-width: 600px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+canvas {
+    border: 1px solid #e5e7eb;
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 20px 20px;
+    cursor: grab;
+    border-radius: 8px;
+}
+
+canvas:active {
+    cursor: grabbing;
+}
+
+/* FORM ELEMENTS */
+h3 { margin: 0 0 10px 0; font-size: 1rem; color: #374151; }
+label { display: block; font-size: 0.85rem; font-weight: 600; color: #4b5563; margin-bottom: 5px; }
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.coord-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.coord-item {
+    background: #f9fafb;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #f3f4f6;
+}
+
+.coord-item strong { color: #4f46e5; margin-right: 5px; }
+
+/* BUTTONS */
+.btn-group { display: flex; gap: 10px; }
+button {
+    flex: 1; padding: 10px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: opacity 0.2s;
+}
+.btn-primary { background: #4f46e5; color: white; }
+.btn-save { background: #10b981; color: white; width: auto; padding: 0 15px;}
+.btn-load { background: #6b7280; color: white; width: auto; padding: 0 15px; }
+
+/* TUTORIAL BOX */
+.tutorial-section {
+    margin-top: auto;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    padding: 15px;
+}
+.tutorial-title { font-size: 0.9rem; font-weight: 700; color: #1e40af; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
+.tutorial-text { font-size: 0.8rem; line-height: 1.5; color: #1e3a8a; }
+.tutorial-text ul { margin: 5px 0; padding-left: 20px; }
+
+/* DB SECTION */
+.db-box {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    padding: 15px;
+    border-radius: 8px;
+}
+.db-row { display: flex; gap: 5px; margin-bottom: 8px; }
+.db-row:last-child { margin-bottom: 0; }
