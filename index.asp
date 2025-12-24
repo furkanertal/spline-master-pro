@@ -84,7 +84,7 @@ End If
     <% 
         Dim developerName, githubLink
         developerName = "Muhammed Furkan Ertal" 
-        githubLink = "https://github.com/furkanertal"
+        githubLink = "https://github.com/furkanertal/spline-master-pro"
     %>
 
     <script>
@@ -338,4 +338,5 @@ Sub DrawLinear()
 End Sub
 
 conn.Close : Set conn = Nothing
+
 %>
